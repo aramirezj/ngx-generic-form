@@ -1,0 +1,17 @@
+/*
+ * Public API Surface of ngx-generic-form
+ */
+export * from './lib/directives/conversion.directive';
+export * from './lib/components/chips/confirmation.component';
+export * from './lib/components/master-select/master-select.component';
+export * from './lib/components/generic-form/generic-form.component';
+
+export * from './lib/service';
+
+export * from './lib/classes/Form';
+export * from './lib/classes/FormElement';
+export * from './lib/enums/TypeConversion';
+export * from './lib/enums/TypeForm';
+export * from './lib/enums/TypeControl';
+
+export * from './lib/directives/matErrorMessages.directive';
