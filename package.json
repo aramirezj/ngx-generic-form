@@ -1,6 +1,6 @@
 {
-  "name": "ngx-generic-form",
-  "version": "1.0.2",
+  "name": "@aramirezj/ngx-generic-form",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
@@ -90,5 +90,28 @@
   },
   "lint-staged": {
     "*.{ts,js,html,css,scss,less,md,json}": "prettier --write"
-  }
+  },
+  "author": "Alejandro Ramírez Jiménez https://www.linkedin.com/in/aramirezjimenez/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aramirezj/ngx-generic-tools"
+  },
+  "bugs": {
+    "url": "https://github.com/aramirezj/ngx-generic-tools/issues"
+  },
+  "publishConfig": {
+    "@aramirezj:registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "angular",
+    "angular-material",
+    "angular15",
+    "generic",
+    "table",
+    "forms"
+  ],
+  "homepage": "https://github.com/aramirezj/ngx-generic-tools",
+  "license": "MIT"
 }
