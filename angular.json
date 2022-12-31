@@ -29,6 +29,13 @@
           "options": {
             "tsConfig": "projects/ngx-generic-form/tsconfig.spec.json"
           }
+        },
+        "deploy": {
+          "builder": "ngx-deploy-npm:deploy",
+          "options": {
+            "access": "public",
+            "buildTarget": "production"
+          }
         }
       }
     },
@@ -130,8 +137,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
