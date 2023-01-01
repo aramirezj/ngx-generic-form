@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import {
@@ -23,6 +23,7 @@ import { GFMasterSelectComponent } from '../master-select/master-select.componen
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { GFMatErrorMessagesDirective } from '../../directives/matErrorMessages.directive';
+import { GFTranslatePipe } from '../../directives/translate.directive';
 
 /** Component for opening through the service. It uses an object GTForm and displays it with the configuration provided */
 @Component({
@@ -42,7 +43,8 @@ import { GFMatErrorMessagesDirective } from '../../directives/matErrorMessages.d
     GFMasterSelectComponent,
     MatNativeDateModule,
     MatDatepickerModule,
-    GFMatErrorMessagesDirective
+    GFMatErrorMessagesDirective,
+    GFTranslatePipe
   ],
 })
 export class GFGenericFormComponent<T> implements OnInit {

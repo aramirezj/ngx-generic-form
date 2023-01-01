@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
@@ -51,6 +51,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
         fullLibraryLoader: async () => await import('highlight.js'),
       },
     },
+    {provide: LOCALE_ID, useValue: 'es-ES' }
   ],
   bootstrap: [AppComponent],
 })

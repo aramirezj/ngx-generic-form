@@ -1,7 +1,7 @@
-import { Component, AfterViewInit, inject, Injector, ChangeDetectorRef } from '@angular/core';
+import { Component, AfterViewInit, inject, Injector, ChangeDetectorRef, LOCALE_ID } from '@angular/core';
 import { MatFormField, MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
-
+import { Res } from './res';
 /** Directive of component that can be added to a mat-error and it will display automatically error messages */
 @Component({
   selector: '[gf-matErrorMessages]',
@@ -16,13 +16,14 @@ export class GFMatErrorMessagesDirective implements AfterViewInit {
   inputRef!: MatFormFieldControl<MatInput>;
 
   _inj:Injector = inject(Injector)
-
+  locale:string = inject(LOCALE_ID);
   cdRef:ChangeDetectorRef = inject(ChangeDetectorRef);
 
   ngAfterViewChecked(){
     this.cdRef.detectChanges();
   }
   ngAfterViewInit() {
+    
     const container = this._inj.get(MatFormField);
     this.inputRef = container._control;
 
@@ -42,32 +43,28 @@ export class GFMatErrorMessagesDirective implements AfterViewInit {
       const firstError = controlErrors ? Object.keys(controlErrors)[0] : null;
       switch (firstError) {
         case 'required':
-          this.error = 'This field is required.';
+          this.error = Res.Get('REQUIRED',this.locale);
           break;
         case 'minlength':
-          this.error = 'This field must have ' + controlErrors?.minlength?.requiredLength + ' characters.';
+          this.error = `${Res.Get('MINLENGTH',this.locale)}${controlErrors?.minlength?.requiredLength}${Res.Get('CHARACTERS',this.locale)}`;
           break;
         case 'maxlength':
-          this.error = 'This field must not have more than ' + controlErrors?.maxlength?.requiredLength + ' characters.';
+          this.error = `${Res.Get('MAXLENGTH',this.locale)}${controlErrors?.maxlength?.requiredLength}${Res.Get('CHARACTERS',this.locale)}`;
           break;
         case 'min':
-          this.error = 'The value of this field must be more than ' + controlErrors?.min?.min.toFixed(2) + '.';
+          this.error = `${Res.Get('MIN',this.locale)}${controlErrors?.min?.min.toFixed(2)}.`;
           break;
         case 'max':
-          if (controlErrors['max'] === true) {
-            this.error = 'The percentage must not be more than 100%.';
-          } else {
-            this.error = 'The value field must not be more than ' + +controlErrors?.max?.max.toFixed(2) + '.';
-          }
+            this.error = `${Res.Get('MAX',this.locale)}${controlErrors?.max?.max.toFixed(2)}.`;
           break;
         case 'email':
-          this.error = 'The format of the email is invalid';
+          this.error = Res.Get('EMAIL',this.locale)
           break;
         case 'incorrect':
-          this.error = 'The field is invalid';
+          this.error = Res.Get('INCORRECT',this.locale)
           break;
         case 'numberRange':
-          this.error = 'The value is not between the valid range.';
+          this.error = Res.Get('NUMBERRANGE',this.locale)
           break;
       }
     }

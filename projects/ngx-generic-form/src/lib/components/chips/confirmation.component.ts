@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, forwardRef, inject, Inject, Injector, Optional, Self } from '@angular/core';
-import { AbstractControl, ControlValueAccessor, FormControl, NgControl, NG_VALIDATORS, NG_VALUE_ACCESSOR, ValidationErrors, Validator, Validators } from '@angular/forms';
+import { Component, Input, forwardRef } from '@angular/core';
+import {  ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR, ValidationErrors, Validators } from '@angular/forms';
+import { GFTranslatePipe } from '../../directives/translate.directive';
 
 /** Control for showing some chips with a Yes/No */
 @Component({
@@ -20,7 +21,7 @@ import { AbstractControl, ControlValueAccessor, FormControl, NgControl, NG_VALID
     }
   ],
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, GFTranslatePipe],
 })
 export class GFConfirmationComponent implements ControlValueAccessor {
   /** Description of the control */

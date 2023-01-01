@@ -5,6 +5,7 @@ import { ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR, Va
 import { Observable, Subject } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { GFMatErrorMessagesDirective } from '../../directives/matErrorMessages.directive';
+import { GFTranslatePipe } from '../../directives/translate.directive';
 
 /** Control component that can receive a list or an observable that retrieves a list and will display a select based component
  * Can be configurated through multiple inputs
@@ -13,7 +14,7 @@ import { GFMatErrorMessagesDirective } from '../../directives/matErrorMessages.d
   selector: 'gf-master-select',
   templateUrl: './master-select.component.html',
   styleUrls: ['./master-select.component.scss'],
-  imports: [CommonModule, MatSelectModule, MatFormFieldModule, GFMatErrorMessagesDirective],
+  imports: [CommonModule, MatSelectModule,GFTranslatePipe, MatFormFieldModule, GFMatErrorMessagesDirective],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

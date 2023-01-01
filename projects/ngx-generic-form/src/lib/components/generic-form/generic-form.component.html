@@ -30,7 +30,7 @@
                 [max]="maxDate" />
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker touchUi #picker></mat-datepicker>
-              <mat-error>La fecha es inválida</mat-error>
+              <mat-error>{{'DATE' | translate}}</mat-error>
             </mat-form-field>
 
             <!--Control de Select simple-->
@@ -47,8 +47,8 @@
             <mat-form-field *ngSwitchCase="GF_TypeControl.SELECTBOOLEAN" appearance="outline" class="eleFormulario">
               <mat-label>{{ form.visual[i] }}</mat-label>
               <mat-select [formControlName]="model">
-                <mat-option [value]="true">Si</mat-option>
-                <mat-option [value]="false">No</mat-option>
+                <mat-option [value]="true">{{'YES' | translate}}</mat-option>
+                <mat-option [value]="false">{{'NO' | translate}}</mat-option>
               </mat-select>
               <mat-error gf-matErrorMessages></mat-error>
             </mat-form-field>
@@ -70,7 +70,7 @@
         </ng-container>
       </div>
     </form>
-    <p *ngIf="!cForm">No se ha podido iniciar el formulario correctamente.</p>
+    <p *ngIf="!cForm">{{'NOT_STARTED' | translate}}</p>
     <div class="dialog-actions" *ngIf="!soloLectura; else noEditable">
       <button *ngFor="let action of form.extraActions" color="primary" class="btnCancelar"
         (click)="doExtraAction(action)">
@@ -79,9 +79,9 @@
       <span class="example-spacer"></span>
       <div class="botones">
         <button color="accent" class="btnCancelar" (click)="close()">
-          Cancel
+          {{'CANCEL' | translate}}
         </button>
-        <button color="primary" (click)="save()">Save</button>
+        <button color="primary" (click)="save()">{{ 'SAVE' |translate}}</button>
       </div>
     </div>
     <ng-template #noEditable>
@@ -92,7 +92,7 @@
         </button>
         <span class="example-spacer"></span>
         <button color="primary" class="btnCerrar" (click)="close()">
-          Close
+          {{'CLOSE' | translate}}
         </button>
       </div>
     </ng-template>
