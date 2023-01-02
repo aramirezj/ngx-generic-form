@@ -5,9 +5,9 @@ import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GFConfirmationComponent } from 'projects/ngx-generic-tables/src/lib/components/chips/confirmation.component';
-import { GFMasterSelectComponent } from 'projects/ngx-generic-tables/src/lib/components/master-select/master-select.component';
-import { GFGenericFormComponent } from 'projects/ngx-generic-tables/src/lib/components/generic-form/generic-form.component';
+import { GFConfirmationComponent } from 'projects/ngx-generic-form/src/lib/components/chips/confirmation.component';
+import { GFMasterSelectComponent } from 'projects/ngx-generic-form/src/lib/components/master-select/master-select.component';
+import { GFGenericFormComponent } from 'projects/ngx-generic-form/src/lib/components/generic-form/generic-form.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -19,7 +19,7 @@ import { ComponentsComponent } from './components/components.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ClassesComponent } from './classes/classes.component';
 import { DirectivesComponent } from './directives/directives.component';
-import { GFConversionDirective, GFMatErrorMessagesDirective } from 'projects/ngx-generic-tables/src/public-api';
+import { GFConversionDirective, GFMatErrorMessagesDirective } from 'projects/ngx-generic-form/src/public-api';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 

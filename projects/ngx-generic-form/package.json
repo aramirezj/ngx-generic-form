@@ -1,5 +1,5 @@
 {
-  "name": "@aramirezj/ngx-generic-tables",
+  "name": "@aramirezj/ngx-generic-form",
   "version": "0.9.1",
   "peerDependencies": {
     "@angular/common": "^15.0.4",
@@ -23,10 +23,10 @@
   "author": "Alejandro Ramírez Jiménez https://www.linkedin.com/in/aramirezjimenez/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aramirezj/ngx-generic-tables.git"
+    "url": "https://github.com/aramirezj/ngx-generic-form.git"
   },
   "bugs": {
-    "url": "https://github.com/aramirezj/ngx-generic-tables/issues"
+    "url": "https://github.com/aramirezj/ngx-generic-form/issues"
   },
   "keywords": [
     "javascript",
@@ -38,6 +38,6 @@
     "table",
     "forms"
   ],
-  "homepage": "https://github.com/aramirezj/ngx-generic-tables",
+  "homepage": "https://github.com/aramirezj/ngx-generic-form",
   "license": "MIT"
 }

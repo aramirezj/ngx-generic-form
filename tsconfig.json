@@ -13,7 +13,7 @@
     "strictNullChecks": true,
     "sourceMap": true,
     "paths": {
-      "ngxGenericForm": ["dist/ngx-generic-tables"]
+      "ngxGenericForm": ["dist/ngx-generic-form"]
     },
     "declaration": false,
     "downlevelIteration": true,

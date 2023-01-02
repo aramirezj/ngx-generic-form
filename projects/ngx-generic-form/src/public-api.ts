@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ngx-generic-tables
+ * Public API Surface of ngx-generic-form
  */
 export * from './lib/directives/conversion.directive';
 export * from './lib/components/chips/confirmation.component';

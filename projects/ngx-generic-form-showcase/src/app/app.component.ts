@@ -4,7 +4,7 @@ import {
   GFFormService,
   GF_Form,
   GF_TypeForm,
-} from 'projects/ngx-generic-tables/src/public-api';
+} from 'projects/ngx-generic-form/src/public-api';
 
 export interface Persona {
   id?:number;
