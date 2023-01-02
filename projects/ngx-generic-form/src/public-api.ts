@@ -10,6 +10,7 @@ export * from './lib/service';
 
 export * from './lib/classes/Form';
 export * from './lib/classes/FormElement';
+export * from './lib/classes/APIRequest';
 export * from './lib/enums/TypeConversion';
 export * from './lib/enums/TypeForm';
 export * from './lib/enums/TypeControl';

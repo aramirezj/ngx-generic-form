@@ -51,7 +51,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
         fullLibraryLoader: async () => await import('highlight.js'),
       },
     },
-    {provide: LOCALE_ID, useValue: 'es-ES' }
+   // {provide: LOCALE_ID, useValue: 'es-ES' }
   ],
   bootstrap: [AppComponent],
 })
