@@ -1,24 +1,24 @@
 {
-  "name": "@aramirezj/ngx-generic-form",
+  "name": "@aramirezj/ngx-generic-tables",
   "version": "0.9.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "build": "npm run build:library && npm run build:showcase && del-cli --force ./dist/ngx-generic-form/fesm2015",
+    "build": "npm run build:library && npm run build:showcase && del-cli --force ./dist/ngx-generic-tables/fesm2015",
     "build:library": "ng build --project=ngxGenericForm && npm run copy-readme",
     "build:showcase": "ng build --project=ngxGenericFormShowcase --base-href ./",
     "bump-version": "rjp package.json version $VERSION",
-    "copy-readme": "copyfiles README.md dist/ngx-generic-form",
-    "copy-docs": "copyfiles dist/ngx-generic-form-showcase/ docs/",
+    "copy-readme": "copyfiles README.md dist/ngx-generic-tables",
+    "copy-docs": "copyfiles dist/ngx-generic-tables-showcase/ docs/",
     "customize": "node form/customization.mjs",
     "lint": "eslint projects/**/*.ts",
     "lint-fix": "eslint projects/**/*.ts --fix",
     "lint-staged": "lint-staged --allow-empty",
     "commitlint": "commitlint --edit",
-    "watch:library": "jest --config projects/ngx-generic-form/jest.config.js --watch",
-    "test:library": "jest --config projects/ngx-generic-form/jest.config.js",
-    "test:showcase": "jest --config projects/ngx-generic-form-showcase/jest.config.js",
-    "coverage:library": "jest --config projects/ngx-generic-form/jest.config.js --coverage --coverageDirectory=../../.coverage",
+    "watch:library": "jest --config projects/ngx-generic-tables/jest.config.js --watch",
+    "test:library": "jest --config projects/ngx-generic-tables/jest.config.js",
+    "test:showcase": "jest --config projects/ngx-generic-tables-showcase/jest.config.js",
+    "coverage:library": "jest --config projects/ngx-generic-tables/jest.config.js --coverage --coverageDirectory=../../.coverage",
     "format:test": "prettier --list-different 'projects/**/*.{ts,html}'",
     "format:write": "prettier --write 'projects/**/*.{ts,html}'",
     "prepare": "husky install"
@@ -97,10 +97,10 @@
   "author": "Alejandro Ramírez Jiménez https://www.linkedin.com/in/aramirezjimenez/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aramirezj/ngx-generic-form"
+    "url": "https://github.com/aramirezj/ngx-generic-tables"
   },
   "bugs": {
-    "url": "https://github.com/aramirezj/ngx-generic-form/issues"
+    "url": "https://github.com/aramirezj/ngx-generic-tables/issues"
   },
   "publishConfig": {
     "@aramirezj:registry": "https://npm.pkg.github.com"
@@ -115,6 +115,6 @@
     "table",
     "forms"
   ],
-  "homepage": "https://github.com/aramirezj/ngx-generic-form",
+  "homepage": "https://github.com/aramirezj/ngx-generic-tables",
   "license": "MIT"
 }

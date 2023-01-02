@@ -8,11 +8,11 @@ Note: Big part of the bundle size of the library is from material, if you are us
 
 ## Installing
 
-Run `npm install ngx-generic-form`
+Run `npm install ngx-generic-tables`
 
 ## Information, use and showcase
 
-[Interactive demo](https://aramirezj.github.io/ngx-generic-form/)
+[Interactive demo](https://aramirezj.github.io/ngx-generic-tables/)
 
 ## Language support
 

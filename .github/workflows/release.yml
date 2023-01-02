@@ -29,7 +29,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Move to the correct directory
-        working-directory: ./dist/ngx-generic-form
+        working-directory: ./dist/ngx-generic-tables
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.TOKEN}}

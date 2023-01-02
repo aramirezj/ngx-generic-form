@@ -5,21 +5,21 @@
   "projects": {
     "ngxGenericForm": {
       "projectType": "library",
-      "root": "projects/ngx-generic-form",
-      "sourceRoot": "projects/ngx-generic-form/src",
+      "root": "projects/ngx-generic-tables",
+      "sourceRoot": "projects/ngx-generic-tables/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ngx-generic-form/ng-package.json"
+            "project": "projects/ngx-generic-tables/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-generic-form/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-generic-tables/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ngx-generic-form/tsconfig.lib.json"
+              "tsConfig": "projects/ngx-generic-tables/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "tsConfig": "projects/ngx-generic-form/tsconfig.spec.json"
+            "tsConfig": "projects/ngx-generic-tables/tsconfig.spec.json"
           }
         },
         "deploy": {
@@ -46,25 +46,25 @@
           "style": "scss"
         }
       },
-      "root": "projects/ngx-generic-form-showcase",
-      "sourceRoot": "projects/ngx-generic-form-showcase/src",
+      "root": "projects/ngx-generic-tables-showcase",
+      "sourceRoot": "projects/ngx-generic-tables-showcase/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-generic-form-showcase",
-            "index": "projects/ngx-generic-form-showcase/src/index.html",
-            "main": "projects/ngx-generic-form-showcase/src/main.ts",
-            "polyfills": "projects/ngx-generic-form-showcase/src/polyfills.ts",
-            "tsConfig": "projects/ngx-generic-form-showcase/tsconfig.app.json",
+            "outputPath": "dist/ngx-generic-tables-showcase",
+            "index": "projects/ngx-generic-tables-showcase/src/index.html",
+            "main": "projects/ngx-generic-tables-showcase/src/main.ts",
+            "polyfills": "projects/ngx-generic-tables-showcase/src/polyfills.ts",
+            "tsConfig": "projects/ngx-generic-tables-showcase/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/ngx-generic-form-showcase/src/favicon.ico",
-              "projects/ngx-generic-form-showcase/src/assets"
+              "projects/ngx-generic-tables-showcase/src/favicon.ico",
+              "projects/ngx-generic-tables-showcase/src/assets"
             ],
             "styles": [
-              "projects/ngx-generic-form-showcase/src/styles.scss",
+              "projects/ngx-generic-tables-showcase/src/styles.scss",
               "@angular/material/prebuilt-themes/indigo-pink.css"
             ],
             "scripts": []
@@ -85,8 +85,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "projects/ngx-generic-form-showcase/src/environments/environment.ts",
-                  "with": "projects/ngx-generic-form-showcase/src/environments/environment.prod.ts"
+                  "replace": "projects/ngx-generic-tables-showcase/src/environments/environment.ts",
+                  "with": "projects/ngx-generic-tables-showcase/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -123,13 +123,13 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "tsConfig": "projects/ngx-generic-form-showcase/tsconfig.spec.json",
+            "tsConfig": "projects/ngx-generic-tables-showcase/tsconfig.spec.json",
             "assets": [
-              "projects/ngx-generic-form-showcase/src/favicon.ico",
-              "projects/ngx-generic-form-showcase/src/assets"
+              "projects/ngx-generic-tables-showcase/src/favicon.ico",
+              "projects/ngx-generic-tables-showcase/src/assets"
             ],
             "styles": [
-              "projects/ngx-generic-form-showcase/src/styles.scss",
+              "projects/ngx-generic-tables-showcase/src/styles.scss",
               "@angular/material/prebuilt-themes/indigo-pink.css"
             ],
             "scripts": []

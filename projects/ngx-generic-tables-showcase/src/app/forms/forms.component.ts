@@ -1,5 +1,5 @@
 import { AfterViewChecked, Component, ElementRef, inject } from '@angular/core';
-import { GFFormService, GF_Form, GF_FormElement, GF_TypeControl, GF_TypeForm } from 'projects/ngx-generic-form/src/public-api';
+import { GFFormService, GF_Form, GF_FormElement, GF_TypeControl, GF_TypeForm } from 'projects/ngx-generic-tables/src/public-api';
 
 @Component({
   templateUrl: './forms.component.html',
