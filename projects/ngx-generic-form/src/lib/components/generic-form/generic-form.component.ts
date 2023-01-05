@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, LOCALE_ID, inject } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
@@ -24,6 +24,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { GFMatErrorMessagesDirective } from '../../directives/matErrorMessages.directive';
 import { GFTranslatePipe } from '../../directives/translate.directive';
+import { Res } from '../../directives/res';
 
 /** Component for opening through the service. It uses an object GTForm and displays it with the configuration provided */
 @Component({
@@ -56,6 +57,8 @@ export class GFGenericFormComponent<T> implements OnInit {
   form!: GF_Form<T>;
   /** Fecha máxima para los campos fechas para evitar 5 digitos en años */
   maxDate: Date = new Date(9999, 12, 31);
+
+  locale: string = inject(LOCALE_ID);
   constructor(
     private dialogRef: DialogRef<T>,
     @Inject(DIALOG_DATA) data: GF_Form<T>,
@@ -63,6 +66,7 @@ export class GFGenericFormComponent<T> implements OnInit {
     public dialog: Dialog
   ) {
     if (data) {
+
       this.form = data;
       this.soloLectura = this.form.type === GF_TypeForm.INSPECTION;
     }
@@ -208,6 +212,25 @@ export class GFGenericFormComponent<T> implements OnInit {
   doExtraAction(extraAction: GF_ExtraAction): void {
     extraAction.function();
     if (extraAction.close) this.dialogRef.close();
+
+  }
+
+  /**
+   * Handle the file upload
+   * @param event Event with the files
+   * @param model Model of the control
+   */
+  fileUploaded(event: any, model: string): void {
+    this.form.images = new FormData();
+    let i: number = 0;
+    if (event.target.files) {
+      for (const file of event.target.files) {
+        this.form.images.append(model + i, file);
+        i++;
+      }
+    }
+    this.cForm.get(model)?.setValue(`${i} ${Res.Get('UPLOADED', this.locale)}`);
+
 
   }
 }

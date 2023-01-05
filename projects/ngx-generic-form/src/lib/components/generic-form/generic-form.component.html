@@ -59,6 +59,16 @@
                 [maxlength]="cForm.get(form.model[i])?.errors?.['maxlength']?.requiredLength ?? null"></textarea>
               <mat-error gf-matErrorMessages></mat-error>
             </mat-form-field>
+            <ng-container *ngSwitchCase="GF_TypeControl.FILE">
+             
+              <input type="file" hidden [formControlName]="model" multiple
+                (change)="fileUploaded($event,model )" #inputFoto />
+              <button mat-raised-button color="primary" (click)="inputFoto.click()">{{'UPLOAD' | translate}}</button>
+              <mat-label>{{ form.visual[i] }} : </mat-label>
+              <span>{{cForm.get(model)?.value ?? ''}}</span>
+            </ng-container>
+
+
             <!--Control de Select Maestro-->
             <gf-master-select *ngSwitchCase="GF_TypeControl.SELECTMASTER" [data]="form.controls[model].list"
               [formControlName]="model" [label]="form.controls[model].label"

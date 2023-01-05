@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { GFGenericFormComponent } from './components/generic-form/generic-form.component';
 import { GF_Form } from './classes/Form';
+import { FormGroup, UntypedFormArray } from '@angular/forms';
 
 /** Service for the form utilies */
 @Injectable({ providedIn: 'root' })
@@ -23,4 +24,28 @@ export class GFFormService {
     });
     return dialogRef.closed;
   }
+
+  /**
+  * Function that receives a formGroup to investigate and return a list with the names of the invalid controls
+  *
+  * @param formToInvestigate Form to investigate
+  */
+  findInvalidControlsRecursive(formToInvestigate: FormGroup | UntypedFormArray): string[] {
+    const invalidControls: string[] = [];
+    const recursiveFunc = (form: FormGroup | UntypedFormArray): void => {
+      Object.keys(form.controls).forEach(field => {
+        const control = form.get(field);
+        if (control?.invalid) { invalidControls.push(field); }
+        if (control instanceof FormGroup) {
+          recursiveFunc(control);
+        } else if (control instanceof UntypedFormArray) {
+          recursiveFunc(control);
+        }
+      });
+    };
+    recursiveFunc(formToInvestigate);
+    return invalidControls;
+  }
+
+  
 }

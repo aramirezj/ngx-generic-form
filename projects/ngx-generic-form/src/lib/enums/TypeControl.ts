@@ -8,5 +8,6 @@ export enum GF_TypeControl {
   SELECTBOOLEAN = 'booleanSelect',
   SELECTMASTER = 'masterSelect',
   TEXTAREA = 'textArea',
-  CONFIRMATION = 'confirmation'
+  CONFIRMATION = 'confirmation',
+  FILE = 'file'
 }

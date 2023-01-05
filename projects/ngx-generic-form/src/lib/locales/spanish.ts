@@ -9,6 +9,8 @@ export const spanish = {
     DIALOG_EDITING: 'Edición del elemento',
     DIALOG_INSPECTING: 'Inspección del elemento',
     NOT_STARTED: 'No se ha podido iniciar el formulario correctamente.',
+    UPLOAD: 'Subir',
+    UPLOADED: ' ficheros subidos',
     //Chip
     YES: 'Si',
     NO: 'No',

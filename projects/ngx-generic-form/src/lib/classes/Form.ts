@@ -30,6 +30,8 @@ export class GF_Form<T> {
     edition?: GF_APIRequest;
   } = {};
 
+  images: FormData= new FormData();
+
   constructor(
     /** Type of the form  */
     public type: GF_TypeForm,

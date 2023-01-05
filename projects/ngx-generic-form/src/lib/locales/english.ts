@@ -9,6 +9,8 @@ export const english = {
     DIALOG_EDITING: 'Edit the element',
     DIALOG_INSPECTING: 'Inspecting the element',
     NOT_STARTED: 'The form couldtn be started.',
+    UPLOAD: 'Upload',
+    UPLOADED: ' uploaded files',
     //Chip
     YES: 'Yes',
     NO: 'No',
