@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Component, Input, forwardRef } from '@angular/core';
 import {  ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR, ValidationErrors, Validators } from '@angular/forms';
 import { GFTranslatePipe } from '../../directives/translate.directive';
@@ -21,7 +21,7 @@ import { GFTranslatePipe } from '../../directives/translate.directive';
     }
   ],
   standalone: true,
-  imports: [CommonModule, GFTranslatePipe],
+  imports: [GFTranslatePipe, NgClass, NgIf],
 })
 export class GFConfirmationComponent implements ControlValueAccessor {
   /** Description of the control */

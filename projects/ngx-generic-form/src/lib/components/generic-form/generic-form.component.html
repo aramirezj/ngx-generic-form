@@ -59,10 +59,10 @@
                 [maxlength]="cForm.get(form.model[i])?.errors?.['maxlength']?.requiredLength ?? null"></textarea>
               <mat-error gf-matErrorMessages></mat-error>
             </mat-form-field>
+
+            <!-- Control for files -->
             <ng-container *ngSwitchCase="GF_TypeControl.FILE">
-             
-              <input type="file" hidden [formControlName]="model" multiple
-                (change)="fileUploaded($event,model )" #inputFoto />
+              <input type="file" hidden multiple (change)="fileUploaded($event,model )" #inputFoto />
               <button mat-raised-button color="primary" (click)="inputFoto.click()">{{'UPLOAD' | translate}}</button>
               <mat-label>{{ form.visual[i] }} : </mat-label>
               <span>{{cForm.get(model)?.value ?? ''}}</span>

@@ -3,7 +3,7 @@ import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR, ValidationErrors, Validator, Validators } from '@angular/forms';
 import { Observable, Subject } from 'rxjs';
-import { CommonModule } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { GFMatErrorMessagesDirective } from '../../directives/matErrorMessages.directive';
 import { GFTranslatePipe } from '../../directives/translate.directive';
 
@@ -14,7 +14,7 @@ import { GFTranslatePipe } from '../../directives/translate.directive';
   selector: 'gf-master-select',
   templateUrl: './master-select.component.html',
   styleUrls: ['./master-select.component.scss'],
-  imports: [CommonModule, MatSelectModule,GFTranslatePipe, MatFormFieldModule, GFMatErrorMessagesDirective],
+  imports: [MatSelectModule,GFTranslatePipe, MatFormFieldModule, GFMatErrorMessagesDirective, NgIf, NgFor],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, LOCALE_ID, inject } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { NgFor, NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import {
   Dialog,
@@ -34,7 +34,6 @@ import { Res } from '../../directives/res';
   standalone: true,
   imports: [
     DialogModule,
-    CommonModule,
     GFConversionDirective,
     MatFormFieldModule,
     MatSnackBarModule,
@@ -45,7 +44,11 @@ import { Res } from '../../directives/res';
     MatNativeDateModule,
     MatDatepickerModule,
     GFMatErrorMessagesDirective,
-    GFTranslatePipe
+    GFTranslatePipe,
+    NgFor,
+    NgSwitch,
+    NgSwitchCase,
+    NgIf
   ],
 })
 export class GFGenericFormComponent<T> implements OnInit {
@@ -57,7 +60,7 @@ export class GFGenericFormComponent<T> implements OnInit {
   form!: GF_Form<T>;
   /** Fecha máxima para los campos fechas para evitar 5 digitos en años */
   maxDate: Date = new Date(9999, 12, 31);
-
+  /** Injection of the language */
   locale: string = inject(LOCALE_ID);
   constructor(
     private dialogRef: DialogRef<T>,
@@ -220,7 +223,7 @@ export class GFGenericFormComponent<T> implements OnInit {
    * @param event Event with the files
    * @param model Model of the control
    */
-  fileUploaded(event: any, model: string): void {
+  protected fileUploaded(event: any, model: string): void {
     this.form.images = new FormData();
     let i: number = 0;
     if (event.target.files) {
