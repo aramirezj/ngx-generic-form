@@ -20,4 +20,4 @@ Currently English and Spanish is supported, the library will detect it throught 
 
 ## Similar library
 
-[ngx-generic-form](https://www.npmjs.com/package/@aramirezj/ngx-generic-tables/) Library of utilities for displaying data through tables powered by Angular material
+[ngx-generic-tables](https://www.npmjs.com/package/@aramirezj/ngx-generic-tables/) Library of utilities for displaying data through tables powered by Angular material
