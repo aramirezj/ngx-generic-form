@@ -17,3 +17,7 @@ Run `npm install ngx-generic-form`
 ## Language support
 
 Currently English and Spanish is supported, the library will detect it throught the `{provide: LOCALE_ID, useValue: YOUR_LOCALE_ID }` in the providers of your application
+
+## Similar library
+
+[ngx-generic-form](https://www.npmjs.com/package/@aramirezj/ngx-generic-tables/) Library of utilities for displaying data through tables powered by Angular material

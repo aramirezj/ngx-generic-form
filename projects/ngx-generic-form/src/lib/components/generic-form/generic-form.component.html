@@ -66,6 +66,7 @@
               <button mat-raised-button color="primary" (click)="inputFoto.click()">{{'UPLOAD' | translate}}</button>
               <mat-label>{{ form.visual[i] }} : </mat-label>
               <span>{{cForm.get(model)?.value ?? ''}}</span>
+              <mat-error *ngIf="cForm.get(model)?.hasError('required')">{{'REQUIRED' | translate}}</mat-error>
             </ng-container>
 
 

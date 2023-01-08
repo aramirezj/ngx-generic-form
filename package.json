@@ -1,6 +1,6 @@
 {
   "name": "@aramirezj/ngx-generic-form",
-  "version": "0.9.4",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
