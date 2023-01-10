@@ -14,13 +14,14 @@ export class GFFormService {
   /**
    * Open the GenericForm component with a form
    * @param form Form to open
-   * @param minWidth Width of the dialog with the form
+   * @param width Width of the dialog with the form
    * @returns An entity of the form
    */
-  openForm(form: GF_Form<any>, minWidth: string = '35vw'): Observable<any> {
+  openForm(form: GF_Form<any>, width: string = '35vw'): Observable<any> {
     const dialogRef = this.dialog.open(GFGenericFormComponent, {
       data: form,
-      minWidth,
+      minWidth:width,
+      maxWidth:width
     });
     return dialogRef.closed;
   }
