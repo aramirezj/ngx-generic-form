@@ -63,9 +63,10 @@
             <!-- Control for files -->
             <ng-container *ngSwitchCase="GF_TypeControl.FILE">
               <input type="file" hidden multiple (change)="fileUploaded($event,model )" #inputFoto />
-              <button mat-raised-button color="primary" (click)="inputFoto.click()">{{'UPLOAD' | translate}}</button>
-              <mat-label>{{ form.visual[i] }} : </mat-label>
-              <span>{{cForm.get(model)?.value ?? ''}}</span>
+              <button mat-raised-button color="primary" (click)="inputFoto.click()"
+                [disabled]="cForm.get(model)?.disabled">{{'UPLOAD' | translate}}</button>
+              <mat-label [class]="cForm.get(model)?.disabled ? 'disabled' : ''">{{ form.visual[i] }} : </mat-label>
+              <span [class]="cForm.get(model)?.disabled ? 'disabled' : ''">{{cForm.get(model)?.value ?? ''}}</span>
               <mat-error *ngIf="cForm.get(model)?.hasError('required')">{{'REQUIRED' | translate}}</mat-error>
             </ng-container>
 

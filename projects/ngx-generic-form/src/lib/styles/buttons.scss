@@ -65,3 +65,8 @@ button[icon-button] {
   cursor: pointer;
   overflow: visible;
 }
+
+button[color][disabled] {
+  pointer-events: none;
+  opacity: .5;
+}

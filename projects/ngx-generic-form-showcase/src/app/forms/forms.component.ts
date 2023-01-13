@@ -8,7 +8,7 @@ import { GFFormService, GF_Form, GF_FormElement, GF_TypeControl, GF_TypeForm } f
 export class FormsComponent {
   formService: GFFormService = inject(GFFormService);
   elementRef:ElementRef = inject(ElementRef);
-  formProduct: GF_Form<any> = new GF_Form(GF_TypeForm.CREATION, ['code', 'name', 'type', 'stock'], ['Code', 'Full name', 'Type', 'Stock'], 'Creating a product');
+  formProduct: GF_Form<any> = new GF_Form(GF_TypeForm.CREATION, ['code', 'name', 'type', 'stock','image'], ['Code', 'Full name', 'Type', 'Stock','Image'], 'Creating a product');
   types: any[] = [{ id: 1, name: 'Furniture' }, { id: 2, name: 'Food' }, { id: 3, name: 'Drink' }, { id: 4, name: 'Clothes' }]
   customProduct: any;
 
@@ -25,6 +25,7 @@ export class FormsComponent {
     this.customProduct = { code: 'AGR002', name: 'An amazing chair', type: this.types[0].id, stock: 54 };
 
     this.formProduct.changeTypeControl(GF_TypeControl.NUMBER, ['stock']);
+    this.formProduct.changeTypeControl(GF_TypeControl.FILE, ['image']);
     this.formProduct.addElement('type', new GF_FormElement('type', GF_TypeControl.SELECTMASTER, false, this.types, 'name', undefined, 'id'));
     this.formProduct.setRequired(['name', 'type']);
   }
