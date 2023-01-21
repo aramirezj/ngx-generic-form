@@ -25,12 +25,12 @@ export class GF_Form<T> {
   /** Extra functions to be executed through buttons */
   extraActions: GF_ExtraAction[] = [];
   /** Request that the form could execute before it closes */
-  APIRequest?: {
+  APIRequest: {
     creation?: GF_APIRequest;
     edition?: GF_APIRequest;
   } = {};
 
-  images: FormData= new FormData();
+  images: FormData = new FormData();
 
   constructor(
     /** Type of the form  */

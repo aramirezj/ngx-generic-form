@@ -6,9 +6,9 @@ export class GF_APIRequest {
     /**Params that could need the query, it can be used the literal 'OBJECT' to pass the whole object. */
     public params: string[] = [],
     /** List of pair key value that will be setted in the element and can be used as params */
-    public parametersToElement?: {},
+    public parametersToElement?: { [k:string] : any },
     /** List of pair key value that can be used as params directly to the Path. They do no add information to the element */
-    public parametersToPath?: {}
+    public parametersToPath?: { [k:string] : any }
   ) { }
 
   /**
@@ -16,7 +16,7 @@ export class GF_APIRequest {
    * @param elemento Base element
    * @returns List of params of the api
    */
-  prepareParams(elemento: any): any[] {
+  prepareParams<T>(elemento: T): any[] {
     // Listado de valores finales que se enviarán
     const valoresPeticion: any[] = [];
     // Si hay una serie de parametros con valores predeterminados, estos valores se asignan

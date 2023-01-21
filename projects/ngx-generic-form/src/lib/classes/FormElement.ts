@@ -13,7 +13,7 @@ export class GF_FormElement {
     /** If the control is disabled */
     public disabled: boolean = false,
     /** If its a select, can have the observable of the information of the list */
-    public list?: Observable<any> | any[],
+    public list?: Observable<any[]> | any[],
     /** If select, and if object, where should get the info to display */
     public label?: string,
     /** If select, and if object, second label */
